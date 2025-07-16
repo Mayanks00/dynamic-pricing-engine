@@ -1,0 +1,6 @@
+product_id,category,stock,original_price,competitor_price,sales_rating,last_week_sales,discount_applied,target_price
+101,electronics,10,500,480,4.2,10,0.05,470
+102,clothing,50,1200,1100,3.8,35,0.1,1080
+103,beauty,30,300,290,4.5,25,0.03,285
+104,home,20,700,650,4.0,20,0.07,660
+105,electronics,15,450,430,4.1,15,0.02,425
