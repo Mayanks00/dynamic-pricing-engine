@@ -40,8 +40,9 @@ def predict_price(data: ProductFeatures):
     try:
         input_data = data.dict()
 
-        # Convert category label to numeric
-        category_str = input_data.get("category")
+        # ✅ Convert category to lowercase so input like 'Clothing', 'CLOTHING' will work
+        category_str = input_data.get("category", "").lower()
+
         if category_str not in category_map:
             return {"error": f"Invalid category: {category_str}. Must be one of {list(category_map.keys())}"}
 
@@ -58,5 +59,4 @@ def predict_price(data: ProductFeatures):
     except Exception as e:
         print("🔥 Error during prediction:", e)
         return {"error": "Internal Server Error", "details": str(e)}
-
 
