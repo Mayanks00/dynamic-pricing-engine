@@ -35,7 +35,7 @@ def home():
     return {"message": "Dynamic Pricing API is live!"}
 
 # Prediction route
-@app.post("/predict")
+@app.post("/predict_price")
 def predict_price(data: ProductFeatures):
     try:
         input_data = data.dict()
